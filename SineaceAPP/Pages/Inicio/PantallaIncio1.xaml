@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="SineaceAPP.Pages.Inicio.PantallaIncio1"
+             xmlns:local="clr-namespace:SineaceAPP.Custom.Inicio"
+             Title="Inicio">
+    <!--<ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            x:Name="verview"
+            VerticalOptions="Center">
+
+            <Image
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="dotnet_bot.png" />
+            <Image x:Name="gifImage"
+                   IsEnabled="True"
+                   IsAnimationPlaying="True"
+                   />
+
+            
+            <local:GIFImage
+                x:Name="imgLoader"
+                Source="logoanimado3v2.gif"
+                ImageName="logoanimado3v2.gif"
+                HeightRequest="200"
+                WidthRequest="200"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                IsAnimationPlaying="True"
+                />
+
+            <Label
+                FontSize="32"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Hello, World!" />
+
+            <Label
+                FontSize="18"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.HeadingLevel="Level2"
+                Text="Welcome to .NET Multi-platform App UI" />
+
+            <Button
+                x:Name="CounterBtn"
+                
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Click me" />
+
+        </VerticalStackLayout>
+    </ScrollView>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+
+
+        </Grid.RowDefinitions>
+
+        <Image x:Name="gifImage"
+                   IsEnabled="True"
+                   IsAnimationPlaying="True"
+                   />
+        <local:GIFImage Grid.Row="0"
+                x:Name="gifImage1"
+                Source="logoanimado3.gif"
+                ImageName="logoanimado3.gif"
+                HeightRequest="120"
+                WidthRequest="120"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                IsAnimationPlaying="True"
+                />
+        <local:GIFImage Grid.Row="0"
+                x:Name="gifImage2" 
+                Source="logoanimado4.gif"
+                ImageName="logoanimado4.gif"
+                HeightRequest="270"
+                WidthRequest="270"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                IsAnimationPlaying="True"
+                />
+        <!--<Image Grid.Row="0" x:Name="gifImage1"
+                   IsEnabled="True"
+                   IsAnimationPlaying="True"
+                Source="logoanimado3.gif"
+                HeightRequest="120"
+                WidthRequest="120"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                   />-->
+        <!--<Image Grid.Row="0" x:Name="gifImage2" 
+                   IsEnabled="True"
+                   IsAnimationPlaying="True"
+                Source="logoanimado4.gif"
+                HeightRequest="270"
+                WidthRequest="270"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                   />-->
+
+
+
+
+    </Grid>
+
+
+</ContentPage>

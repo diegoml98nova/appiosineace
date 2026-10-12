@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SineaceAPP", "SineaceAPP\SineaceAPP.csproj", "{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SineaceAPP.Tests", "SineaceAPP.Tests\SineaceAPP.Tests.csproj", "{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Debug|x64.Build.0 = Debug|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Debug|x86.Build.0 = Debug|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Release|x64.ActiveCfg = Release|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Release|x64.Build.0 = Release|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Release|x86.ActiveCfg = Release|Any CPU
+		{AA04A5D8-BA03-4BD1-8F2A-502BC84AC7E3}.Release|x86.Build.0 = Release|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Debug|x64.Build.0 = Debug|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Debug|x86.Build.0 = Debug|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Release|x64.ActiveCfg = Release|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Release|x64.Build.0 = Release|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Release|x86.ActiveCfg = Release|Any CPU
+		{07785F4D-C8BC-4DDE-A1A5-78A3412D4C4E}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/sineacedevops
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SineaceAPP\\SineaceAPP.csproj
+		SccProjectName1 = SineaceAPP
+		SccLocalPath1 = SineaceAPP
+	EndGlobalSection
+EndGlobal

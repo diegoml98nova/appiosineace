@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<the49:BottomSheet xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:the49="https://schemas.the49.com/dotnet/2023/maui"
+             x:Class="SineaceAPP.Pages.Mapa.MapaBottomSheet"
+                   
+             x:Name="this"
+             Padding="16, 32"
+              Background="white"
+                   xmlns:local="clr-namespace:SineaceAPP.Models"
+                   x:DataType="local:MapaBottomSheetModel"
+                   >
+    <the49:BottomSheet.GestureRecognizers>
+        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Command="{Binding Institucion}"></TapGestureRecognizer>
+    </the49:BottomSheet.GestureRecognizers>
+<the49:BottomSheet.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        </Style>
+    </the49:BottomSheet.Resources>
+    <VerticalStackLayout>
+        <Label Text="{Binding Institucion}" TextColor="#04acec" FontSize="22" FontFamily="robotobold" Margin="0,0,0,4"/>
+        <Label Text="{Binding Direccion}" TextColor="#7c7c80" FontSize="12" FontFamily="robotobold"/>
+        <Label Text="{Binding Ubigeo}" TextColor="#7c7c80" FontSize="12" FontFamily="robotobold"/>
+        <Label Text="{Binding TipoLocal}" TextColor="#7c7c80" FontSize="12" FontFamily="robotobold"/>
+        <Label Text="{Binding Estado}" TextColor="#7c7c80" FontSize="12" FontFamily="robotobold"  Margin="0,4,0,4"/>
+        <Grid RowDefinitions="Auto,Auto">
+            <Label Grid.Column="0" HorizontalOptions="Start" Text="{Binding Distancia}" TextColor="#04acec" FontSize="14" FontFamily="robotolight"/>
+            <Label Grid.Column="1" HorizontalOptions="End" Text="{Binding ProgramasAcreditados}" TextColor="#04acec" FontSize="14" FontFamily="robotolight"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</the49:BottomSheet>

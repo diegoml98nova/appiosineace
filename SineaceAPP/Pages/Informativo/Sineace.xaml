@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Informativo.Sineace"
+             Title="Sineace">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+
+        <HorizontalStackLayout Grid.Row="0" BackgroundColor="#04acec" Padding="25,15,25,15">
+            <ImageButton x:Name="btnAtras" Source="atras2.png" WidthRequest="40" HeightRequest="40" Clicked="btnMenu_Clicked"></ImageButton>
+            <Label Text="" TextColor="White" FontSize="36" FontFamily="robotobold" Margin="15,0,0,0"></Label>
+        </HorizontalStackLayout>
+        <CollectionView x:Name="collection1" Grid.Row="1" ItemsUpdatingScrollMode="KeepItemsInView" ItemsSource="{Binding SineaceViewModel}">
+            <CollectionView.ItemTemplate >
+                <DataTemplate>
+                    <VerticalStackLayout  Padding="10">
+                        <!--<Image Source="{Binding RutaImagen}" HeightRequest="150"  Aspect="AspectFill"></Image>-->
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Command="{Binding Titulo}"></TapGestureRecognizer>
+                        </VerticalStackLayout.GestureRecognizers>
+                        <Image Source="{Binding RutaImagen}" HeightRequest="200" Aspect="AspectFill"></Image>
+                        <Label  FontFamily="robotobold" IsVisible="false" Text="{Binding Titulo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="End" TextColor="White" FontSize="22"/>
+
+                        <!--<Grid>
+                            <Border StrokeShape="RoundRectangle 20">
+                                <Grid>
+                                    <Rectangle HeightRequest="30" MaximumHeightRequest="30" BackgroundColor="#4D000000" HorizontalOptions="End" VerticalOptions="End"></Rectangle>
+                                    <Label  FontFamily="robotobold" Text="{Binding Titulo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="End" TextColor="White" FontSize="22"/>
+                                    <Rectangle HeightRequest="30" MaximumHeightRequest="30" BackgroundColor="#4D000000" HorizontalOptions="End" VerticalOptions="End"></Rectangle>
+                                    <Label  FontFamily="robotobold" Text="{Binding Titulo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="End" TextColor="White" FontSize="22"/>
+                                </Grid>
+                            </Border>
+                        </Grid>-->
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

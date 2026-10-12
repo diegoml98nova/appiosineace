@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+              x:Class="SineaceAPP.Pages.Mapa.MapaFiltros"
+             Title="modal">
+    <ScrollView>
+        <Grid x:Name="MainContentGrid" RowDefinitions="auto, auto, auto" Margin="0" Padding="0">
+            <VerticalStackLayout>
+                <HorizontalStackLayout BackgroundColor="#04acec" Padding="25,15,25,15">
+                    <ImageButton x:Name="btnAtras" Source="atras2.png" WidthRequest="40" HeightRequest="40" Clicked="btnAtras_Clicked"></ImageButton>
+                    <Label Text="Filtros" TextColor="White" FontSize="36" FontFamily="robotobold" Margin="15,0,0,0"></Label>
+                </HorizontalStackLayout>
+
+                <Label Text="Instituciones educativas"
+                        TextColor="#04acec"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                        FontFamily="robotmedium"
+                        FontSize="20"
+                        Margin="40,10,10,5"/>
+                <Border HeightRequest="70"
+                        Margin="50,5,50,15"
+                        StrokeThickness="0.5"
+                        Padding="20">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Opacity="0.1" />
+                    </Border.Shadow>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20" />
+                    </Border.StrokeShape>
+                    <HorizontalStackLayout >
+                        <ImageButton x:Name="btnChkIns1" Source="check2png.png" WidthRequest="40" Clicked="btnChkIns1_Clicked"></ImageButton>
+                        <Label Text="Universidades" FontFamily="robotolight" TextColor="#707070" FontSize="20" Margin="10,0,0,0"></Label>
+                    </HorizontalStackLayout>
+                </Border>
+                <!--</Frame>-->
+                <Border HeightRequest="70"
+                        Margin="50,5,50,15"
+                        StrokeThickness="0.5"
+                        Padding="20">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Opacity="0.1" />
+                    </Border.Shadow>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20" />
+                    </Border.StrokeShape>
+                    <HorizontalStackLayout >
+                        <ImageButton x:Name="btnChkIns2" Source="check2png.png" WidthRequest="40" Clicked="btnChkIns2_Clicked"></ImageButton>
+                        <Label Text="Institutos" FontFamily="robotolight" TextColor="#707070" FontSize="20" Margin="10,0,0,0"></Label>
+                    </HorizontalStackLayout>
+                </Border>
+                <Border x:Name="btipoInstitucion3" HeightRequest="70"
+                        Margin="50,5,50,5"
+                        StrokeThickness="0.5"
+                        Padding="20">
+                    <Border.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Opacity="0.1" />
+                    </Border.Shadow>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20" />
+                    </Border.StrokeShape>
+                    <HorizontalStackLayout >
+                        <ImageButton x:Name="btnChkIns3" Source="check2png.png" WidthRequest="40" Clicked="btnChkIns3_Clicked"></ImageButton>
+                        <Label Text="Escuelas de las FFAA" FontFamily="robotolight" TextColor="#707070" FontSize="20" Margin="10,0,0,0"></Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+
+                <Label Text="Tipo de gestión"
+                        TextColor="#04acec"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                        FontFamily="robotmedium"
+                        FontSize="20"
+                        Margin="40,10,10,5"/>
+                
+                <Border HeightRequest="50"
+                        Margin="50,0,50,0"
+                        StrokeThickness="0"
+                        Padding="20,20,20,0">
+          
+                    <HorizontalStackLayout >
+                        <ImageButton x:Name="btnChkGes1" Source="check2png.png" WidthRequest="40" Clicked="btnChkGes1_Clicked"></ImageButton>
+                        <Label Text="Pública" FontFamily="robotolight" TextColor="#707070" FontSize="20" Margin="10,0,0,0"></Label>
+                    </HorizontalStackLayout>
+                </Border>
+                <Border HeightRequest="70"
+                        Margin="50,0,50,0"
+                        StrokeThickness="0"
+                        Padding="20">
+
+                    <HorizontalStackLayout >
+                        <ImageButton x:Name="btnChkGes2" Source="check2png.png" WidthRequest="40" Clicked="btnChkGes2_Clicked"></ImageButton>
+                        <Label Text="Privada" FontFamily="robotolight" TextColor="#707070" FontSize="20" Margin="10,0,0,0"></Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Label Text="Cercanía"
+                        TextColor="#04acec"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                        FontFamily="robotmedium"
+                        FontSize="20"
+                        Margin="40,10,10,5"/>
+                <Slider x:Name="slDistancia" ValueChanged="Slider_ValueChanged_1" ThumbColor="#04acec" MinimumTrackColor="#04acec" Margin="40,0,40,0" 
+        Maximum="20"
+        Minimum="0">
+                    
+                </Slider>
+                <Label x:Name="lblDistancia" Text="10.00 Km" FontFamily="robotolight" TextColor="#707070" FontSize="20" Margin="50,0,0,20"></Label>
+                <HorizontalStackLayout >
+                    <CheckBox x:Name="chSinLimites"  Margin="50,0,0,0" Color="#04acec"></CheckBox>
+                    <Label Text="Todo el Perú" FontFamily="robotolight" TextColor="#707070" FontSize="20" Margin="0,8,0,0"></Label>
+                </HorizontalStackLayout>
+             
+
+                <Button Text="Buscar" x:Name="btnBuscar" Clicked="btnBuscar_Clicked" WidthRequest="190" HeightRequest="55" CornerRadius="20" FontFamily="Poppinsmedium" BackgroundColor="#ccd424" FontSize="18">
+                        <Button.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="5,5"
+                                Opacity="0.3" />
+                        </Button.Shadow>
+                </Button>
+            </VerticalStackLayout>
+
+        </Grid>
+    </ScrollView>
+
+</mopups:PopupPage>

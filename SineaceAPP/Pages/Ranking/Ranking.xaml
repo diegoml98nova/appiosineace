@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Ranking.Ranking"
+             Title="Ranking" BackgroundColor="#99FFFFFF">
+    <StackLayout>
+        <Grid VerticalOptions="Start" Margin="0" Padding="0">
+            <Grid Grid.Row="0" VerticalOptions="FillAndExpand" >
+                <!--<ImageButton x:Name="btnMenu" Clicked="btnMenu_Clicked" VerticalOptions="Start" HorizontalOptions="Start" Margin="25,24,0,0"  HeightRequest="55" WidthRequest="55" Source="ic_iconos_03_menu.png"/>-->
+                <ImageButton x:Name="btnMenu" Clicked="btnMenu_Clicked" VerticalOptions="Start" HorizontalOptions="Start" Margin="25,25,0,0" HeightRequest="55" WidthRequest="55" Source="ic_iconos_03_menu.png" BackgroundColor="#04acec" CornerRadius="28"/>
+
+                <AbsoluteLayout VerticalOptions="Start" HorizontalOptions="Fill" Margin="65,0,0,0" HeightRequest="95" MaximumHeightRequest="95">
+                    <Rectangle VerticalOptions="Start" HorizontalOptions="Fill" Margin="0,0,0,0" Fill="#FF00ADEB" StrokeThickness="50" RadiusX="200" RadiusY="200" HeightRequest="110" MaximumHeightRequest="110" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All"/>
+                </AbsoluteLayout>
+                <Label Grid.Column="0" Text="Ranking de instituciones" TextColor="White" FontFamily="Poppinsregular" FontSize="15" Padding="15,0,0,0" Margin="110,40,25,0"/>
+
+
+            </Grid>
+        </Grid>
+   
+        <VerticalStackLayout >
+            <Grid Padding="20,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Margin="0,10,0,0" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start" HeightRequest="25" WidthRequest="25" Source="ic_baseline_search2.svg"/>
+                <Entry x:Name="txtBuscar" Grid.Column="1" Margin="0,0,0,0" Text="" TextColor="#04acec" TextChanged="Entry_TextChanged" ClearButtonVisibility="WhileEditing" Placeholder="Busca tu institución..." PlaceholderColor="#04acec" FontSize="16"></Entry>
+            </Grid>
+
+            <Line X1="400"
+                  Y1="0"
+                  X2="0"
+                  Opacity="0.5"
+                  HeightRequest="10"
+                  Margin="20,0,20,0"
+                  Stroke="#04acec" />
+            <Label x:Name="lblResultados" VerticalOptions="CenterAndExpand" Text="Resultados:0" TextColor="#04acec" FontSize="15" Padding="20,0,0,10" FontFamily="Poppinsmedium"/>
+        </VerticalStackLayout>
+        <CollectionView x:Name="collection1"
+ItemsUpdatingScrollMode="KeepItemsInView" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"  ItemsSource="{Binding InstitucionesViewModel}" Scrolled="collection1_Scrolled">
+
+            <CollectionView.ItemTemplate >
+                <DataTemplate>
+                    <StackLayout Padding="20,10,20,10">
+                        <Frame BackgroundColor="White" BorderColor="White" CornerRadius="10" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Institucion}"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout VerticalOptions="CenterAndExpand" BackgroundColor="White" >
+                                <Label VerticalOptions="CenterAndExpand" Text="{Binding Institucion}" TextColor="#04acec" FontSize="16" Padding="0,0,0,10" FontFamily="robotobold"/>
+                                <Label VerticalOptions="CenterAndExpand" Text="{Binding Tipo}" TextColor="#7c7c80" FontFamily="robotobold" FontSize="12"/>
+                                <Label VerticalOptions="CenterAndExpand" Text="{Binding Gestion}" TextColor="#7c7c80" FontFamily="robotobold" FontSize="12"/>
+                                <Label VerticalOptions="CenterAndExpand" Text="{Binding Estado}" TextColor="#7c7c80" FontFamily="robotobold" FontSize="12"/>
+                                <Label VerticalOptions="CenterAndExpand" Text="{Binding ProgramasAcreditados}" TextColor="#04acec" IsVisible="{Binding AcreditadosVisible}" Padding="0,8,0,10" FontFamily="robotobold" FontSize="12"/>
+                                <Label VerticalOptions="CenterAndExpand" Text="Local acreditado más cercano:" TextColor="#7c7c80" FontFamily="robotobold" FontSize="12"/>
+                                <Grid RowDefinitions="Auto,Auto">
+                                    <Label Grid.Column="0" HorizontalOptions="Start" WidthRequest="150" Text="{Binding Direccion}" FontFamily="robotolight" TextColor="#7c7c80" FontSize="12" />
+                                    <Label Grid.Column="1" HorizontalOptions="End" VerticalOptions="End" Text="{Binding Distancia}" FontFamily="robotolight" TextColor="#04acec" FontSize="12" />
+                                </Grid>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

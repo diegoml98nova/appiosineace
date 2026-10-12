@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Informativo.Aplicativo"
+             Title="Aplicativo">
+    <ScrollView>
+        <Grid x:Name="MainContentGrid" RowDefinitions="auto, auto, auto" >
+            <HorizontalStackLayout Grid.Row="0" BackgroundColor="#04acec" Padding="25,15,25,15">
+                <ImageButton x:Name="btnAtras" Source="atras2.png" WidthRequest="40" HeightRequest="40" Clicked="btnAtras_Clicked"></ImageButton>
+                <Label Text="" TextColor="White" FontSize="36" FontFamily="robotobold" Margin="15,0,0,0"></Label>
+            </HorizontalStackLayout>
+            <VerticalStackLayout Grid.Row="1" Padding="35">
+               
+
+                <Label Text="Información de la aplicación"
+                        TextColor="#04acec"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                        FontFamily="robotmedium"
+                        FontSize="22"
+                      
+                        />
+                <Grid Margin="0,20,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+    
+                    <Label Grid.Column="0" Text="Versión:" TextColor="Black" FontSize="14" FontFamily="robotmedium" ></Label>
+                    <Label Grid.Column="1" Text="Versión 1.0" TextColor="Black" FontSize="14" FontFamily="robotothin" HorizontalTextAlignment="End"></Label>
+                </Grid>
+                <Line X1="500" Y1="0" X2="0" Y2="0" Stroke="LightGray" HeightRequest="1" />
+     
+                <Grid Margin="0,20,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Text="SO requerido:" TextColor="Black" FontSize="14" FontFamily="robotmedium" ></Label>
+                    <Label Grid.Column="1" Text="IOS 16.4 y versiones posteriores" TextColor="Black" FontSize="14" FontFamily="robotothin" HorizontalTextAlignment="End"></Label>
+                </Grid>
+                <Line X1="500" Y1="0" X2="0" Y2="0" Stroke="LightGray" HeightRequest="1"/>
+                <Grid Margin="0,20,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Text="Fecha de lanzamiento:" TextColor="Black" FontSize="14" FontFamily="robotmedium" ></Label>
+                    <Label Grid.Column="1" Text="30/12/2023" TextColor="Black" FontSize="14" FontFamily="robotothin" HorizontalTextAlignment="End"></Label>
+                </Grid>
+                <Line X1="500" Y1="0" X2="0" Y2="0" Stroke="LightGray" HeightRequest="1"/>
+                <Grid Margin="0,20,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Text="Ofrecido por:" TextColor="Black" FontSize="14" FontFamily="robotmedium" ></Label>
+                    <Label Grid.Column="1" Text="Sineace MINEDU" TextColor="Black" FontSize="14" FontFamily="robotothin" HorizontalTextAlignment="End"></Label>
+                </Grid>
+                <Line X1="500" Y1="0" X2="0" Y2="0" Stroke="LightGray" HeightRequest="1"/>
+
+
+            </VerticalStackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

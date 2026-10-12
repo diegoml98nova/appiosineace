@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SineaceAPP"
+           xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui" BackgroundColor="Transparent" CanBeDismissedByTappingOutsideOfPopup="False"
+              x:Class="SineaceAPP.Pages.Otros.PaginaCarga" 
+           
+             >
+    <StackLayout HeightRequest="200" WidthRequest="200">
+        <AbsoluteLayout>
+            <Image x:Name="img1"  AbsoluteLayout.LayoutBounds="15, 60, 0, 0" Source="colibri_ala_izq.png" HeightRequest="100" BackgroundColor="Transparent" WidthRequest="100" Margin="0,0,0,0" HorizontalOptions="Start"  />
+            <Image x:Name="img2"  AbsoluteLayout.LayoutBounds="35, 60, 0, 0" IsVisible="false" Source="colibri_ala_izq_2.png" HeightRequest="100" BackgroundColor="Transparent" WidthRequest="100" Margin="0,0,0,0" HorizontalOptions="Start"  />
+            <Image x:Name="img3"  AbsoluteLayout.LayoutBounds="10, 70, 0, 0"  IsVisible="false" Source="colibri_ala_izq_3.png" HeightRequest="100" BackgroundColor="Transparent" WidthRequest="100" Margin="0,0,0,0" HorizontalOptions="Start"  />
+            <Image  AbsoluteLayout.LayoutBounds="60, 116, 0, 0"  Source="colibri_ala_cuerpo.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
+            <Image x:Name="imgd1"  AbsoluteLayout.LayoutBounds="90, 140, 0,0" Source="colibri_ala_der.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start"  />
+            <Image x:Name="imgd2"  AbsoluteLayout.LayoutBounds="100, 130, 0,0" IsVisible="false" Source="colibri_ala_der_2.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start"  />
+            <Image x:Name="imgd3"  AbsoluteLayout.LayoutBounds="70, 140, 0,10" IsVisible="false" Source="colibri_ala_der_3.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start"  />
+        </AbsoluteLayout>
+    </StackLayout>
+    <!--<VerticalStackLayout  >
+        <Image x:Name="gifImage"
+                   IsEnabled="True"
+                   IsAnimationPlaying="True"
+               
+                   />
+
+        <local:GIFImage
+                x:Name="imgLoader"
+                Source="logoanimado3.gif"
+                ImageName="logoanimado3.gif"
+                HeightRequest="150"
+                WidthRequest="150"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                IsAnimationPlaying="True"
+           
+                />
+    </VerticalStackLayout>-->
+</mct:Popup>

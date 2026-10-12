@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Informativo.Contactanos"
+             Title="Contactanos">
+    <ScrollView>
+        <Grid x:Name="MainContentGrid" RowDefinitions="auto, auto, auto" >
+            <Grid Grid.Row="0" BackgroundColor="#04acec" Padding="25,15,25,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.Column="0" x:Name="btnAtras" Source="atras2.png" WidthRequest="40" HeightRequest="40" Clicked="btnAtras_Clicked" HorizontalOptions="Start"></ImageButton>
+                <ImageButton Grid.Column="1" x:Name="btnCompartir" Source="icon_compartir.png" WidthRequest="40" HeightRequest="40" Clicked="btnCompartir_Clicked" VerticalOptions="End" HorizontalOptions="End"></ImageButton>
+            </Grid>
+            <!--<HorizontalStackLayout Grid.Row="0" BackgroundColor="#04acec" Padding="25,15,25,15">
+                <HorizontalStackLayout HorizontalOptions="End" VerticalOptions="End" Background="Red" MinimumWidthRequest="500">
+                    <ImageButton x:Name="btnCompartir" Source="icon_compartir.png" WidthRequest="40" HeightRequest="40" Clicked="btnCompartir_Clicked" VerticalOptions="End" HorizontalOptions="End"></ImageButton>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>-->
+            <VerticalStackLayout Grid.Row="1" Padding="35,20,35,35">
+
+
+                <Label Text="Contáctanos"
+                      TextColor="#04acec"
+                      VerticalOptions="Start" 
+                      HorizontalOptions="Start"
+                      FontFamily="robotmedium"
+                      FontSize="22"
+                       Margin="0,0,0,10"
+                    
+                      />
+                <HorizontalStackLayout Margin="0,0,0,10">
+                    <ImageButton x:Name="btnFacebook" Source="icon_facebook.png" Clicked="btnFacebook_Clicked" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Margin="0,0,10,0"></ImageButton>
+                    <ImageButton x:Name="btnTwiter" Source="icon_twiter.png" Clicked="btnTwiter_Clicked" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Margin="0,0,10,0"></ImageButton>
+                    <ImageButton x:Name="btnYoutube" Source="icon_youtube.png" Clicked="btnYoutube_Clicked" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Margin="0,0,10,0"></ImageButton>
+                    <ImageButton x:Name="btnLinkedin" Source="icon_linkedin.png" Clicked="btnLinkedin_Clicked" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Margin="0,0,10,0"></ImageButton>
+                </HorizontalStackLayout>
+                <Button x:Name="btnTelefono" Clicked="btnTelefono_Clicked" Text="(511) 6371122 - 6371123" MinimumHeightRequest="35" HeightRequest="20" TextColor="Black" FontSize="18" FontFamily="robotothin" Background="Transparent" HorizontalOptions="Start" Margin="0" Padding="0"></Button>
+                <Button x:Name="btnCorreo1" Clicked="btnCorreo1_Clicked" Text="consultas@sineace.gob.pe" MinimumHeightRequest="35" HeightRequest="20" TextColor="Black" FontSize="18" FontFamily="robotothin" Background="Transparent" HorizontalOptions="Start" Margin="0" Padding="0"></Button>
+                <Button x:Name="btnCorreo2" Clicked="btnCorreo2_Clicked" Text="soporte@sineace.gob.pe" MinimumHeightRequest="35" HeightRequest="20" TextColor="Black" FontSize="18" FontFamily="robotothin" Background="Transparent" HorizontalOptions="Start" Margin="0" Padding="0"></Button>
+
+                <Label Text="Visítanos" TextColor="#04acec" VerticalOptions="Start" HorizontalOptions="Start" FontFamily="robotmedium" FontSize="22" Margin="0,15,0,10"/>
+                <Label Text="Av. República de Panamá N° 3659,3663 - San isidro, Lima  - Perú/ Central: (511) 6371122" TextColor="Black" FontSize="18" FontFamily="robotothin"></Label>
+                <HorizontalStackLayout Margin="0,10,0,10">
+                    <ImageButton x:Name="btnMapa" Clicked="btnMapa_Clicked" Source="icon_mapa.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Margin="0,0,10,0"></ImageButton>
+                    <ImageButton x:Name="btnGobierno" Clicked="btnGobierno_Clicked" Source="icon_gob.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Start" Margin="0,0,10,0"></ImageButton>
+                </HorizontalStackLayout>
+                <Button Text="Términos y condiciones" MinimumHeightRequest="10" HeightRequest="16" TextColor="#04acec" FontSize="18" FontFamily="robotomedium" Background="Transparent" HorizontalOptions="Start" Margin="0,10,0,0" Padding="0"></Button>
+                <Line X1="190" Y1="0" X2="0" Y2="0" Stroke="#04acec" HeightRequest="1"/>
+            </VerticalStackLayout>
+           
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

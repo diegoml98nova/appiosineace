@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Informativo.Sineace_2"
+             Title="Sineace_2" BackgroundImageSource="fondo_sineace3.png">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="1" Aspect="AspectFill" Source="fondo_sineace3.png"></Image>
+        <HorizontalStackLayout Grid.Row="0" BackgroundColor="#04acec" Padding="25,15,25,15">
+            <ImageButton x:Name="btnAtras" Source="atras2.png" WidthRequest="40" HeightRequest="40" Clicked="btnAtras_Clicked"></ImageButton>
+            <Label Text="" TextColor="White" FontSize="36" FontFamily="robotobold" Margin="15,0,0,0"></Label>
+        </HorizontalStackLayout>
+        <CarouselView Grid.Row="1" x:Name="carrucleView" IndicatorView="indicatorView" CurrentItemChanged="carrucleView_CurrentItemChanged" VerticalOptions="End" HorizontalOptions="End">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10,80,10,10"  VerticalOptions="End" HorizontalOptions="End">
+                        <Label FontSize="38"  Margin="10,40,10,10" FontFamily="Poppinbold" FontAttributes="Bold" HorizontalOptions="Start" TextColor="#04acec" Text="{Binding Titulo}" IsVisible="{Binding TituloVisible}"/>
+                        <Label FontSize="15"  Margin="10,10,10,0" FontFamily="Poppinbold" FontAttributes="Bold" TextColor="#04acec" Text="{Binding SubTitulo1}" IsVisible="{Binding SubTitulo1Visible}"/>
+                        <Label FontSize="16"  Margin="10,10,10,0" FontFamily="poppinslight" FontAttributes="Bold" TextColor="#04acec" Text="{Binding SubTitulo11}" IsVisible="{Binding SubTitulo11Visible}"/>
+                        <Label FontSize="14"  Margin="10,10,10,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion1}" IsVisible="{Binding Descripcion1Visible}"/>
+                        <Label FontSize="15"  Margin="10,10,10,0" FontFamily="Poppinbold" FontAttributes="Bold" TextColor="#04acec" Text="{Binding SubTitulo2}" IsVisible="{Binding SubTitulo2Visible}"/>
+                        <Label FontSize="16"  Margin="10,10,10,0" FontFamily="poppinslight" FontAttributes="Bold" TextColor="#04acec" Text="{Binding SubTitulo22}" IsVisible="{Binding SubTitulo22Visible}"/>
+                        <Label FontSize="14"  Margin="10,10,10,10" FontFamily="poppinslight" VerticalTextAlignment="End" FontAttributes="Bold" HorizontalOptions="End" VerticalOptions="End" Text="{Binding Descripcion2}" IsVisible="{Binding Descripcion2Visible}"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView Grid.Row="2" x:Name="indicatorView" Margin="5" HorizontalOptions="Center" IndicatorColor="#CBCBCB" SelectedIndicatorColor="#ccd424" IndicatorSize="11"/>
+
+    </Grid>
+</ContentPage>

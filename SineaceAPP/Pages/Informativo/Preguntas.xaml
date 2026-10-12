@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Informativo.Preguntas"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Preguntas">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10*" />
+            <!--<RowDefinition Height="2*" />-->
+        </Grid.RowDefinitions>
+        <Image Grid.Row="2" Aspect="AspectFill" Source="fondo_sineace3.png"></Image>
+        <HorizontalStackLayout Grid.Row="0" BackgroundColor="#04acec" Padding="25,15,25,15">
+            <ImageButton x:Name="btnAtras" Source="atras2.png" WidthRequest="40" HeightRequest="40" Clicked="btnAtras_Clicked"></ImageButton>
+            <Label Text="" TextColor="White" FontSize="36" FontFamily="robotobold" Margin="15,0,0,0"></Label>
+        </HorizontalStackLayout>
+        <VerticalStackLayout Grid.Row="1" Margin="0,20,0,0">
+            <Grid  Padding="20,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Margin="0,8,0,0" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start" HeightRequest="30" WidthRequest="30" MaximumWidthRequest="30" MinimumHeightRequest="20" BackgroundColor="Transparent" Source="ic_baseline_search_243.png"/>
+                <Entry x:Name="txtBuscar" Grid.Column="1" Margin="15,0,0,0" Text="" TextColor="#04acec" TextChanged="txtBuscar_TextChanged" ClearButtonVisibility="WhileEditing" Placeholder="Busca tu pregunta..." PlaceholderColor="#04acec" FontSize="16"></Entry>
+            </Grid>
+            <Line X1="400"
+                  Y1="0"
+                  X2="0"
+                  Opacity="0.5"
+                  HeightRequest="10"
+                  Margin="20,0,20,0"
+                  Stroke="#04acec" />
+        </VerticalStackLayout>
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout x:Name="vsPreguntas"  Margin="10"  BindableLayout.ItemsSource="{Binding MyPropertyItems}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <mct:Expander x:Name="MyComplexExpanders" VerticalOptions="StartAndExpand">
+                            <mct:Expander.Header>
+                                <Frame BackgroundColor="White" BorderColor="White" CornerRadius="20" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="10">
+                                    <Grid ColumnDefinitions="Auto,*">
+                                        <Image Grid.Column="0" x:Name="HeaderImage" HeightRequest="30" WidthRequest="30"  Source="arroleftpreguntas.png">
+                                            <Image.Triggers>
+                                                <DataTrigger TargetType="Image" Binding="{Binding Source={x:Reference MyComplexExpanders}, Path=IsExpanded}" Value="True">
+                                                    <Setter Property="Rotation" Value="90" />
+                                                </DataTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                        <Label Grid.Column="1" FontFamily="poppinsbold" Text="{Binding Header}" FontSize="14" Margin="0,6,0,0">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference MyComplexExpanders}, Path=IsExpanded}" Value="True">
+                                                    <Setter Property="TextColor" Value="#04acec"></Setter>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+
+
+                                    </Grid>
+                                </Frame>
+                            </mct:Expander.Header>
+                            <VerticalStackLayout BindableLayout.ItemsSource="{Binding MyPropertyItems}" VerticalOptions="FillAndExpand">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame BackgroundColor="White" BorderColor="White" CornerRadius="20" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="10">
+
+                                            <mct:Expander x:Name="MyComplexExpanders" VerticalOptions="StartAndExpand">
+                                                <mct:Expander.Header>
+                                                    <Grid ColumnDefinitions="Auto,*">
+                                                        <Image Grid.Column="0" x:Name="HeaderImage" HeightRequest="30" WidthRequest="30"  Source="arroleftpreguntas.png">
+                                                            <Image.Triggers>
+                                                                <DataTrigger TargetType="Image" Binding="{Binding Source={x:Reference MyComplexExpanders}, Path=IsExpanded}" Value="True">
+                                                                    <Setter Property="Rotation" Value="90" />
+                                                                </DataTrigger>
+                                                            </Image.Triggers>
+                                                        </Image>
+                                                        <Label Grid.Column="1" FontFamily="poppinsbold" Text="{Binding Reserve}" FontSize="14" Margin="0,6,0,0">
+                                                            <Label.Triggers>
+                                                                <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference MyComplexExpanders}, Path=IsExpanded}" Value="True">
+                                                                    <Setter Property="TextColor" Value="#04acec"></Setter>
+                                                                </DataTrigger>
+                                                            </Label.Triggers>
+                                                        </Label>
+                                                    </Grid>
+                                                </mct:Expander.Header>
+                                                <!--<StackLayout x:Name="webViewLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                    <StackLayout.Children Binding="{Binding Address}">
+                                                        
+                                                    </StackLayout.Children>
+                                                </StackLayout>-->
+                                                <StackLayout x:Name="webViewLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                    <Grid>
+
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="1*" />
+                                                            <!--<RowDefinition Height="2*" />-->
+                                                        </Grid.RowDefinitions>
+                                                        <WebView Grid.Row="0" Source="{Binding Address}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,0,0,0">
+
+                                                        </WebView>
+                                                        <Label Grid.Row="0" Text="{Binding Address2}" FontFamily="poppinslight" FontSize="16" Margin="0,10,0,0" TextColor="Transparent"/>
+                                                    </Grid>
+                                                </StackLayout>
+                                                <!---->
+                                            </mct:Expander>
+                                        </Frame>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </VerticalStackLayout>
+
+                        </mct:Expander>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

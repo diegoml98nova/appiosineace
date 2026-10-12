@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Otros.MenuControl"
+             Title="MenuControl">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>-->
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Otros.MenuControl">
+
+    <ScrollView Margin="0" Padding="0" VerticalOptions="Start">
+        <Grid Padding="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="310" />
+                <RowDefinition Height="300" />
+            </Grid.RowDefinitions>
+            <VerticalStackLayout Grid.Row="0" VerticalOptions="Start" Padding="0,0,0,0">
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                      Padding="20,25,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_icono_mapapng.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Mapa acreditados"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MapaAcreditados"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                       Padding="20,10,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_icono_mapapng.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Mapa licenciados"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MapaLicenciados"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                      Padding="20,10,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_institucionpng.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Instituciones educativas"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Instituciones"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                       Padding="20,10,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_programapng.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Programas de estudio"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Programas"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                       Padding="20,10,10,60"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_icon_ranking2png.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Top de acreditaciones (10)"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Ranking"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+                <Line X1="400"
+                  Y1="0"
+                  X2="0"
+                  Opacity="0.5"
+                  HeightRequest="10"
+                  Stroke="gray" />
+
+
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Row="1" VerticalOptions="End" Padding="0,0,0,0">
+        
+                
+                
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                      Padding="20,25,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_menu44.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Información del app"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="InformacionApp"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                       Padding="20,10,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_menu55.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Contáctanos"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Contactanos"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                       Padding="20,10,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_menu6png.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Guía"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Guia"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                       Padding="20,10,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_menu7png.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="¿Que es el Sineace?"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Sineace"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                       Padding="20,10,10,8"
+                      ColumnSpacing="10">
+                    <Image Grid.Column="0" 
+                           Source="ic_icono_portal3png.png"
+                           Aspect="Fill"
+                           HeightRequest="28"
+                           WidthRequest="28"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Sineace en línea"
+                           FontSize="14"
+                           FontFamily="Poppinsmedium"
+                           TextColor="#7c7c80"
+                           VerticalOptions="Center"
+                           />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SineaceEnLinea"/>
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentView>
+
+    
+    

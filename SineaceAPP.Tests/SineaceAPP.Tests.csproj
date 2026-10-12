@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <RootNamespace>SineaceAPP.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
+  </ItemGroup>
+
+  <!-- Archivos enlazados de la capa Services (02-plan §3.2): sin Pages/** ni tipos MAUI -->
+  <ItemGroup>
+    <Compile Include="../SineaceAPP/Services/Configuracion/**/*.cs" LinkBase="Services/Configuracion" />
+  </ItemGroup>
+
+  <!-- Los archivos de entorno se leen desde disco en las pruebas -->
+  <ItemGroup>
+    <None Include="../SineaceAPP/Config/appsettings.*.json" LinkBase="Config" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SineaceAPP.Pages.Informativo.Sineace_1"
+             BackgroundImageSource="fondo_sineace3.png"
+             Title="Sineace_1">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout Grid.Row="0" BackgroundColor="#04acec" Padding="25,15,25,15">
+            <ImageButton x:Name="btnAtras" Source="atras2.png" WidthRequest="40" HeightRequest="40" Clicked="btnAtras_Clicked"></ImageButton>
+            <Label Text="" TextColor="White" FontSize="36" FontFamily="robotobold" Margin="15,0,0,0"></Label>
+        </HorizontalStackLayout>
+        <!--<Image Aspect="AspectFill" Source="fondo_sineace3.png"></Image>-->
+        <CarouselView Grid.Row="1" x:Name="carrucleView" IndicatorView="indicatorView" CurrentItemChanged="carrucleView_CurrentItemChanged" BackgroundColor="Transparent">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10"  VerticalOptions="End">
+                        <!--<Image Source="logocalado.png" Margin="0,0,0,10" WidthRequest="230" IsVisible="{Binding ImgVisible}"></Image>-->
+                        <Image Source="logocalado.png"  WidthRequest="230" HeightRequest="140" Margin="0,80,0,0" HorizontalOptions="Center" BackgroundColor="Transparent" IsVisible="{Binding ImgVisible}"></Image>
+                        <Label FontSize="26"  Margin="10,40,10,10" FontFamily="Poppinbold" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#04acec" Text="{Binding Titulo}" IsVisible="{Binding TituloVisible}"/>
+                        <Label FontSize="26"  Margin="25,40,25,0" FontFamily="Poppinbold" FontAttributes="Bold" HorizontalOptions="Start" TextColor="#04acec" Text="{Binding Titulo2}" IsVisible="{Binding Titulo2Visible}"/>
+                        <Label FontSize="46"  Margin="25,0,25,0" FontFamily="Poppinbold" FontAttributes="Bold" HorizontalOptions="Start" TextColor="#04acec" Text="{Binding Titulo3}" IsVisible="{Binding Titulo3Visible}"/>
+                        <Label FontSize="14"  Margin="10,10,10,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion1}" IsVisible="{Binding Descripcion1Visible}"/>
+                        <Label FontSize="14"  Margin="25,10,25,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion3v1}" IsVisible="{Binding Descripcion3v1Visible}"/>
+                        <Label FontSize="14"  Margin="25,0,25,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion3v2}" IsVisible="{Binding Descripcion3v2Visible}"/>
+                        <Label FontSize="14"  Margin="25,0,25,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion3v3}" IsVisible="{Binding Descripcion3v3Visible}"/>
+                        <Label FontSize="14"  Margin="25,0,25,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion3v4}" IsVisible="{Binding Descripcion3v4Visible}"/>
+                        <Label FontSize="14"  Margin="25,0,25,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion3v5}" IsVisible="{Binding Descripcion3v5Visible}"/>
+                        <Label FontSize="14"  Margin="25,0,25,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion3v6}" IsVisible="{Binding Descripcion3v6Visible}"/>
+                        <Label FontSize="15"  Margin="10,10,10,0" FontFamily="Poppinbold" FontAttributes="Bold" TextColor="#04acec" Text="{Binding SubTitulo}" IsVisible="{Binding SubTituloVisible}"/>
+                        <Label FontSize="14"  Margin="10,10,10,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion2}" IsVisible="{Binding Descripcion2Visible}"/>
+                        <Label FontSize="14"  Margin="20,10,10,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion3}" IsVisible="{Binding Descripcion3Visible}"/>
+                        <Label FontSize="14"  Margin="20,10,10,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion4}" IsVisible="{Binding Descripcion4Visible}"/>
+                        <Label FontSize="14"  Margin="20,10,10,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion5}" IsVisible="{Binding Descripcion5Visible}"/>
+                        <Label FontSize="14"  Margin="20,10,10,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion6}" IsVisible="{Binding Descripcion6Visible}"/>
+                        <Label FontSize="14"  Margin="20,10,10,10" FontFamily="poppinslight" FontAttributes="Bold"  Text="{Binding Descripcion7}" IsVisible="{Binding Descripcion7Visible}"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView Grid.Row="2" x:Name="indicatorView" Margin="5" HorizontalOptions="Center" IndicatorColor="#CBCBCB" SelectedIndicatorColor="#ccd424" IndicatorSize="11"/>
+
+    </Grid>
+
+</ContentPage>

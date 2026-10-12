@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SineaceAPP.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SineaceAPP.Pages.Mapa"
+    xmlns:local2="clr-namespace:SineaceAPP.Pages.Instituciones"
+    xmlns:controls="clr-namespace:SineaceAPP.Pages.Otros"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutIcon="dotnet_bot.png"
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="False"
+    >
+    <Shell.FlyoutHeader>
+        <AbsoluteLayout Background="#04acec" Padding="80,20" HeightRequest="90">
+            <Image Source="logo_blanco_3.png" WidthRequest="150" HeightRequest="60"></Image>
+        </AbsoluteLayout>
+
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutContent>
+        <controls:MenuControl />
+    </Shell.FlyoutContent>
+    
+    <Shell.FlyoutFooterTemplate>
+
+        <DataTemplate>
+
+            <StackLayout>
+                <Image Source="apple.png"
+                       HeightRequest="30"
+                       WidthRequest="30"
+                       HorizontalOptions="Center"></Image>
+                <Label Text="iOS"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="ParentRoute">
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:Mapa}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+</Shell>
+
+<!--<Shell
+    NavigationPage.HasNavigationBar="False"
+    x:Class="SineaceAPP.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SineaceAPP.Pages.Mapa"
+    xmlns:local2="clr-namespace:SineaceAPP.Pages.Instituciones"
+    xmlns:controls="clr-namespace:SineaceAPP.Pages.Otros"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="False"
+    Shell.NavBarIsVisible="False">
+
+    <Shell.FlyoutHeader>
+        <AbsoluteLayout Background="#04acec" Padding="80,35" HeightRequest="120">
+            <Image Source="logo_blanco_3.png" WidthRequest="150"></Image>
+        </AbsoluteLayout>
+
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutContent>
+        <controls:MenuControl />
+    </Shell.FlyoutContent>
+    <Shell.FlyoutFooterTemplate>
+
+        <DataTemplate>
+
+            <StackLayout >
+                <Image Source="apple.png"
+                       HeightRequest="30"
+                       WidthRequest="30"
+                       HorizontalOptions="Center"></Image>
+                <Label Text="iOS"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+    <FlyoutItem Title="Home" FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent 
+        Title="Mapa acreditados"
+        ContentTemplate="{DataTemplate local:Mapa}"
+        Route="Mapa"
+        Icon="ic_icono_mapa.sgv"/>
+
+        <ShellContent
+        Title="Mapa licenciados"
+        ContentTemplate="{DataTemplate local2:Instituciones}"
+        Route="page2" 
+        Icon="ic_icono_mapa.sgv"/>
+
+        <ShellContent
+        Title="Instituciones educativas"
+        Icon="ic_institucion.sgv"
+            />     
+        <ShellContent
+        Title="Programas de estudio"
+        ContentTemplate="{DataTemplate local:Mapa}"
+        Route="MainPage"
+        Icon="ic_programa.sgv"/>
+        <ShellContent
+        Title="Top de acreditaciones"
+        ContentTemplate="{DataTemplate local:Mapa}"
+        Route="MainPage"
+        Icon="ic_icon_ranking2.sgv"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Home" FlyoutDisplayOptions="AsMultipleItems" >
+        <ShellContent
+        Title="información del app"
+        ContentTemplate="{DataTemplate local:Mapa}"
+        Route="Mapa"
+        Icon="ic_menu44.png"/>
+
+        <ShellContent
+        Title="Contáctanos"
+        ContentTemplate="{DataTemplate local:Mapa}"
+        Route="page2" 
+        Icon="ic_menu55.png"/>
+
+        <ShellContent
+        Title="Guía"
+        ContentTemplate="{DataTemplate local:Mapa}"
+        Route="page3"
+         Icon="ic_menu6.sgv"/>
+
+        <ShellContent
+        Title="¿Que es el Sineace?"
+        ContentTemplate="{DataTemplate local:Mapa}"
+        Route="page3"
+        Icon="ic_menu7.sgv"/>
+
+        <ShellContent
+        Title="Sineace en línea"
+        ContentTemplate="{DataTemplate local:Mapa}"
+        Route="page3"
+         Icon="ic_icono_portal3.sgv"/>
+
+    </FlyoutItem>
+
+
+
+
+</Shell>-->
+

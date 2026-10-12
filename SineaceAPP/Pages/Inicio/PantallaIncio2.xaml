@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="SineaceAPP.Pages.Inicio.PantallaIncio2"
+             Title="Inicio2" BackgroundColor="#04acec">
+    <!--<ContentPage.Background>
+
+        <LinearGradientBrush StartPoint="0,0"
+                     EndPoint="1,1">
+            <GradientStop Color="#04acec"
+                  Offset="0.0" />
+            <GradientStop Color="#0484cc"
+                  Offset="0.66" />
+            <GradientStop Color="#04acec"
+                  Offset="1.0" />
+        </LinearGradientBrush>
+
+    </ContentPage.Background>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" x:Name="img1"
+                   IsEnabled="True"
+                Source="logo_blanco_3.png"
+                HeightRequest="220"
+                WidthRequest="220"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                   />
+    </Grid>
+</ContentPage>

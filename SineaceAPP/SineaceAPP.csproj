@@ -1,0 +1,327 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+	  <SccProjectName>SAK</SccProjectName>
+	  <SccProvider>SAK</SccProvider>
+	  <SccAuxPath>SAK</SccAuxPath>
+	  <SccLocalPath>SAK</SccLocalPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFrameworks>net10.0-ios</TargetFrameworks>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>SineaceAPP</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>SineaceAPP</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.sineaceapp</ApplicationId>
+		<ApplicationIdGuid>19cc9132-6820-412b-9a65-28a81787eadd</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion>15.0</SupportedOSPlatformVersion>
+
+		<!-- RNF-PORT-001 / AD-01: iOS 15.0. AD-24: la comparacion es-PE y la regla B dependen de ICU: sin globalizacion invariante -->
+		<InvariantGlobalization>false</InvariantGlobalization>
+
+		<!-- AD-05: entorno de configuracion (Produccion por defecto). Para pruebas: dotnet build -p:SineaceEntorno=Pruebas -->
+		<SineaceEntorno Condition="'$(SineaceEntorno)' == ''">Produccion</SineaceEntorno>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)'=='net10.0-ios'">
+	  <CodesignKey>Apple Development: Created via API (VULHNR62WF)</CodesignKey>
+	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+    <!--<MauiIcon Include="Resources\AppIcon\appicon.svg" />-->
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#ffffff" />
+
+    <!--<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appicon.svg" Color="#512BD4" />-->
+    
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\iconomapav1.png" />
+	  <MauiImage Remove="Resources\Images\iconomapav2.png" />
+	  <MauiImage Remove="Resources\Images\iconomapav3.png" />
+	  <MauiImage Remove="Resources\Images\iconomapav4.png" />
+	  <MauiImage Remove="Resources\Images\iconomapav5.png" />
+	  <MauiImage Remove="Resources\Images\iconomapav6.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <!--<None Remove="Resources\AppIcon\appiconfg.svg" />-->
+	  <None Remove="Resources\AppIcon\appicon.svg" />
+	  <None Remove="Resources\Fonts\poppinsbold.otf" />
+	  <None Remove="Resources\Fonts\poppinslight.otf" />
+	  <None Remove="Resources\Fonts\poppinsmedium.otf" />
+	  <None Remove="Resources\Fonts\poppinsregular.otf" />
+	  <None Remove="Resources\Fonts\robotoblack.ttf" />
+	  <None Remove="Resources\Fonts\robotobold.ttf" />
+	  <None Remove="Resources\Fonts\robotolight.ttf" />
+	  <None Remove="Resources\Fonts\robotomedium.ttf" />
+	  <None Remove="Resources\Fonts\robotothin.ttf" />
+	  <None Remove="Resources\Images\apple.png" />
+	  <None Remove="Resources\Images\arroleftpreguntas.png" />
+	  <None Remove="Resources\Images\bienvenido.PNG" />
+	  <None Remove="Resources\Images\bienvenido_2_4.jpg" />
+	  <None Remove="Resources\Images\bienvenido_3_3.jpg" />
+	  <None Remove="Resources\Images\bienvenido_4_4.jpg" />
+	  <None Remove="Resources\Images\blanco.png" />
+	  <None Remove="Resources\Images\c80d5a2d2e1504e84a9d98f3cb825442.gif" />
+	  <None Remove="Resources\Images\colibri_ala_cuerpo.png" />
+	  <None Remove="Resources\Images\colibri_ala_der.png" />
+	  <None Remove="Resources\Images\colibri_ala_der_2.png" />
+	  <None Remove="Resources\Images\colibri_ala_der_3.png" />
+	  <None Remove="Resources\Images\colibri_ala_izq.png" />
+	  <None Remove="Resources\Images\colibri_ala_izq_2.png" />
+	  <None Remove="Resources\Images\colibri_ala_izq_3.png" />
+	  <None Remove="Resources\Images\currentlocation.png" />
+	  <None Remove="Resources\Images\currentlocation2.svg" />
+	  <None Remove="Resources\Images\currentlocationpng3.png" />
+	  <None Remove="Resources\Images\ejemplo.xml" />
+	  <None Remove="Resources\Images\iconomapav1.png" />
+	  <None Remove="Resources\Images\iconomapav2.png" />
+	  <None Remove="Resources\Images\iconomapav3.png" />
+	  <None Remove="Resources\Images\iconomapav4.png" />
+	  <None Remove="Resources\Images\iconomapav5.png" />
+	  <None Remove="Resources\Images\iconomapav6.png" />
+	  <None Remove="Resources\Images\iconos_01.png" />
+	  <None Remove="Resources\Images\iconos_09.png" />
+	  <None Remove="Resources\Images\iconos_10.png" />
+	  <None Remove="Resources\Images\iconos_11.png" />
+	  <None Remove="Resources\Images\iconos_12.png" />
+	  <None Remove="Resources\Images\icon_compartir.png" />
+	  <None Remove="Resources\Images\icon_facebook.png" />
+	  <None Remove="Resources\Images\icon_gob.png" />
+	  <None Remove="Resources\Images\icon_linkedin.png" />
+	  <None Remove="Resources\Images\icon_mapa.png" />
+	  <None Remove="Resources\Images\icon_twiter.png" />
+	  <None Remove="Resources\Images\icon_youtube.png" />
+	  <None Remove="Resources\Images\ic_baseline_arrow_back_24_v2_azul.png" />
+	  <None Remove="Resources\Images\ic_baseline_filterpng.png" />
+	  <None Remove="Resources\Images\ic_baseline_filter_alt.svg" />
+	  <None Remove="Resources\Images\ic_baseline_search.svg" />
+	  <None Remove="Resources\Images\ic_baseline_searchpng2.png" />
+	  <None Remove="Resources\Images\ic_baseline_search_243.png" />
+	  <None Remove="Resources\Images\ic_iconos_03_menu.svg" />
+	  <None Remove="Resources\Images\ic_icono_mapa.svg" />
+	  <None Remove="Resources\Images\ic_icono_portal3.svg" />
+	  <None Remove="Resources\Images\ic_icon_ranking2.svg" />
+	  <None Remove="Resources\Images\ic_institucion.svg" />
+	  <None Remove="Resources\Images\ic_menu4.png" />
+	  <None Remove="Resources\Images\ic_menu44.png" />
+	  <None Remove="Resources\Images\ic_menu5.png" />
+	  <None Remove="Resources\Images\ic_menu55.png" />
+	  <None Remove="Resources\Images\ic_menu6.svg" />
+	  <None Remove="Resources\Images\ic_menu7.svg" />
+	  <None Remove="Resources\Images\ic_programa.svg" />
+	  <None Remove="Resources\Images\logo_blanco_3.png" />
+	  <None Remove="Resources\Images\Mapa\atras2.png" />
+	  <None Remove="Resources\Images\Mapa\atras3.png" />
+	  <None Remove="Resources\Images\Mapa\check1png.png" />
+	  <None Remove="Resources\Images\Mapa\check2png.png" />
+	  <None Remove="Resources\Images\Mapa\fondo_sineace3.png" />
+	  <None Remove="Resources\Images\Mapa\ic_baseline_arrow_back_24.svg" />
+	  <None Remove="Resources\Images\Mapa\ic_baseline_arrow_back_24_v2.png" />
+	  <None Remove="Resources\Images\Mapa\ic_baseline_keyboard_arrow_left.svg" />
+	  <None Remove="Resources\Images\Mapa\ic_baseline_keyboard_arrow_left_24.png" />
+	  <None Remove="Resources\Images\Mapa\ic_baseline_keyboard_arrow_right.svg" />
+	  <None Remove="Resources\Images\Mapa\ic_baseline_keyboard_arrow_right_24.png" />
+	  <None Remove="Resources\Images\Mapa\ic_baseline_my_location.svg" />
+	  <None Remove="Resources\Images\Mapa\ic_check3.svg" />
+	  <None Remove="Resources\Images\Mapa\ic_check4.svg" />
+	  <None Remove="Resources\Images\Mapa\ic_icono_mapapng.png" />
+	  <None Remove="Resources\Images\Mapa\ic_icono_portal3png.png" />
+	  <None Remove="Resources\Images\Mapa\ic_icon_ranking2png.png" />
+	  <None Remove="Resources\Images\Mapa\ic_institucionpng.png" />
+	  <None Remove="Resources\Images\Mapa\ic_menu6png.png" />
+	  <None Remove="Resources\Images\Mapa\ic_menu7png.png" />
+	  <None Remove="Resources\Images\Mapa\ic_programapng.png" />
+	  <None Remove="Resources\Images\Mapa\logoanimado3.gif" />
+	  <None Remove="Resources\Images\Mapa\logoanimado4.gif" />
+	  <None Remove="Resources\Images\Mapa\logocalado.png" />
+	  <None Remove="Resources\Images\Mapa\logo_color.png" />
+	  <None Remove="Resources\Images\Mapa\marker_esc.png" />
+	  <None Remove="Resources\Images\Mapa\marker_ins.png" />
+	  <None Remove="Resources\Images\Mapa\marker_uni.png" />
+	  <None Remove="Resources\Images\Mapa\my_location_24.png" />
+	  <None Remove="Resources\Images\Mapa\my_location_24_v2.png" />
+	  <None Remove="Resources\Images\Mapa\my_location_24_v3.png" />
+	  <None Remove="Resources\Images\Mapa\my_location_24_v4.png" />
+	  <None Remove="Resources\Images\sineace_op_1.png" />
+	  <None Remove="Resources\Images\sineace_op_2.png" />
+	  <None Remove="Resources\Images\sineace_op_3.png" />
+	  <None Remove="Resources\Images\sineace_op_4.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Images\iconomapav1.png" />
+	  <EmbeddedResource Include="Resources\Images\iconomapav2.png" />
+	  <EmbeddedResource Include="Resources\Images\iconomapav3.png" />
+	  <EmbeddedResource Include="Resources\Images\iconomapav4.png" />
+	  <EmbeddedResource Include="Resources\Images\iconomapav6.png" />
+	  <EmbeddedResource Include="Resources\Images\Mapa\ic_baseline_my_location.svg" />
+	  <EmbeddedResource Include="Resources\Images\Mapa\my_location_24.png" />
+	  <EmbeddedResource Include="Resources\Images\Mapa\my_location_24_v2.png" />
+	  <EmbeddedResource Include="Resources\Images\Mapa\my_location_24_v3.png" />
+	  <EmbeddedResource Include="Resources\Images\Mapa\my_location_24_v4.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Mapa\atras2.png" />
+	  <MauiImage Include="Resources\Images\Mapa\atras3.png" />
+	  <MauiImage Include="Resources\Images\Mapa\check1png.png" />
+	  <MauiImage Include="Resources\Images\Mapa\check2png.png" />
+	  <MauiImage Include="Resources\Images\Mapa\fondo_sineace3.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_baseline_arrow_back_24.svg" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_baseline_arrow_back_24_v2.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_baseline_keyboard_arrow_left.svg" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_baseline_keyboard_arrow_left_24.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_baseline_keyboard_arrow_right.svg" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_baseline_keyboard_arrow_right_24.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_check3.svg" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_check4.svg" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_icono_mapapng.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_icono_portal3png.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_icon_ranking2png.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_institucionpng.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_menu6png.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_menu7png.png" />
+	  <MauiImage Include="Resources\Images\Mapa\ic_programapng.png" />
+	  <MauiImage Include="Resources\Images\Mapa\logoanimado3.gif" />
+	  <MauiImage Include="Resources\Images\Mapa\logoanimado4.gif" />
+	  <MauiImage Include="Resources\Images\Mapa\logocalado.png" />
+	  <MauiImage Include="Resources\Images\Mapa\logo_color.png" />
+	  <MauiImage Include="Resources\Images\Mapa\marker_esc.png" />
+	  <MauiImage Include="Resources\Images\Mapa\marker_ins.png" />
+	  <MauiImage Include="Resources\Images\Mapa\marker_uni.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Images\iconomapav5.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <!-- Solo el archivo del entorno elegido; el codigo lo lee por el nombre logico (CargadorConfiguracion) -->
+	  <EmbeddedResource Include="Config\appsettings.$(SineaceEntorno).json" LogicalName="SineaceAPP.appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="15.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.110" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="10.0.110" />
+		<PackageReference Include="Mopups" Version="1.3.4" />
+		<PackageReference Include="The49.Maui.BottomSheet" Version="8.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="AppShell2.xaml.cs">
+	    <DependentUpon>AppShell2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Mapa\Mapa2.xaml.cs">
+	    <DependentUpon>Mapa2.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="AppShell2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Guia\Guia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Informativo\Aplicativo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Informativo\Contactanos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Informativo\Preguntas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Informativo\Sineace.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Informativo\Sineace_1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Informativo\Sineace_2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Informativo\Sineace_3.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Inicio\InicioCarrucel.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Inicio\PantallaIncio1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Inicio\PantallaIncio2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Instituciones\Instituciones.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Instituciones\InstitucionesFiltros.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Instituciones\InstitucionesProgramas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Mapa\Mapa2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Mapa\Mapa.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Mapa\MapaBottomSheet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Mapa\MapaFiltros.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Mapa\MapaProgramas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Otros\MenuControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Otros\PaginaCarga.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Programas\Programas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Programas\ProgramasFiltros.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Ranking\Ranking.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>
